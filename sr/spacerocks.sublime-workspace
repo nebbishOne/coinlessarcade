@@ -1,0 +1,479 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getFirstDead"
+			],
+			[
+				"enemy",
+				"enemyCount"
+			],
+			[
+				"enemies",
+				"enemies"
+			],
+			[
+				"ene",
+				"enemyCount"
+			],
+			[
+				"check",
+				"checkForEnemy"
+			],
+			[
+				"game",
+				"gameover"
+			],
+			[
+				"ship",
+				"shipMoveRate"
+			],
+			[
+				"move",
+				"moveTargetDown"
+			],
+			[
+				"d",
+				"downKey"
+			],
+			[
+				"time",
+				"timerMessage"
+			],
+			[
+				"accel",
+				"accelerateToXY"
+			],
+			[
+				"up",
+				"upKey"
+			],
+			[
+				"Ke",
+				"KeyCode"
+			],
+			[
+				"add",
+				"addKey"
+			],
+			[
+				"enab",
+				"enableBody"
+			],
+			[
+				"cent",
+				"centerY"
+			],
+			[
+				"book",
+				"book_title"
+			],
+			[
+				"Sea",
+				"SeaBombs"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"acc",
+				"acctNum"
+			],
+			[
+				"return",
+				"returnedText"
+			],
+			[
+				"searc",
+				"searchText"
+			],
+			[
+				"enem",
+				"enemyTimer"
+			],
+			[
+				"start",
+				"startBG"
+			],
+			[
+				"sta",
+				"startBG"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"win",
+				"winHeight"
+			],
+			[
+				"for",
+				"forms"
+			],
+			[
+				"new",
+				"new_text"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 104.0,
+		"last_filter": "install",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			],
+			[
+				"set syntax: h",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 160.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/git/seabombsNEW/README.md",
+		"/C/git/spacerocks/Game.js",
+		"/C/git/seabombs/HighScores.js",
+		"/C/git/seabombs/Game.js",
+		"/C/git/seabombs/StartMenu.js",
+		"/C/git/seabombs/Preloader.js",
+		"/C/git/seabombs/Boot.js",
+		"/C/git/seabombs/index.html",
+		"/C/git/spacerocks/Boot.js",
+		"/C/git/getFreeBook/pagetext.html",
+		"/C/git/getFreeBook/getFreeBook.py",
+		"/C/git/seabombs/getFreeBook/getFreeBook.py",
+		"/C/git/spacerocks/HighScores.js",
+		"/C/git/spacerocks/StartMenu.js",
+		"/C/git/spacerocks/Preloader.js",
+		"/C/git/spacerocks/index.html",
+		"/C/git/spacerocks/Boot.GITHUB",
+		"/C/git/spacerocks/index.GITHUB.html",
+		"/C/git/spacerocks/Game.GITHUB",
+		"/C/Users/Peter/AppData/Local/Temp/tmpEC1.tmp.js",
+		"/C/git/ns_acctfinder/README.md",
+		"/C/bat/chrom.bat",
+		"/C/git/WeatherBars/WeatherBars.ini",
+		"/C/git/ns_accountfinder/popupORIG.js",
+		"/C/git/ns_accountfinder/popupORIG.html",
+		"/C/git/ns_accountfinder/sampleNSsource.html",
+		"/C/git/ns_accountfinder/savedtext.txt",
+		"/C/git/ns_accountfinder/background.js",
+		"/C/git/ns_accountfinder/content.js",
+		"/C/git/ns_accountfinder/popup.js",
+		"/C/git/ns_accountfinder/popup.html",
+		"/C/git/ns_accountfinder/manifest.json",
+		"/C/git/ns_accountfinder/acctfinder.js",
+		"/C/git/spacerocks/README.md",
+		"/C/git/spacerocks/.git/config",
+		"/C/git/spacerocks_v1.github.io-master/index.html",
+		"/C/git/spacerocks/phaser.js",
+		"/C/Users/Peter/Google Drive/games/Sid Meier's Civilization III - Walkthrough.txt",
+		"/C/Users/Peter/Documents/notes.txt",
+		"/C/Users/Peter/Google Drive/homepage/peter-home-homepage.html",
+		"/C/nodecode/scribbletune/test1.js",
+		"/C/Users/Peter/Desktop/webactivitylog.txt",
+		"/C/Program Files (x86)/Dell/SupportAssistAgent/Readme 1.0.txt",
+		"/C/Users/Peter/Google Drive/Uploads/BRNO March 3 - 16 2017.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Day of Defeat Source/dod/cfg/autoexec.cfg",
+		"/C/Users/Peter/Documents/rockies2017/rockies2017.html",
+		"//Fifthpi/bigdrive/MEDIA/MOVIES/Sid and Nancy (1986)/READ this before playing the Movie.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/Day of Defeat Source/dod/cfg/config.cfg",
+		"/C/Users/Peter/Desktop/h5/index.html",
+		"/C/Users/Peter/Desktop/h5/peter-home-homepage.html",
+		"/C/Users/Peter/Google Drive/Code/ras_pi/network_info_notes.txt",
+		"/E/cmdline.txt",
+		"/E/LICENSE.oracle",
+		"/E/COPYING.linux",
+		"/E/issue.txt",
+		"/E/config.txt",
+		"/C/Program Files (x86)/Steam/steamapps/common/the witcher 2/bin/config/lang/ES.ini",
+		"/C/Program Files (x86)/Steam/steamapps/common/the witcher 2/bin/config/Input_QWERTY.ini",
+		"/C/Program Files (x86)/Steam/steamapps/common/the witcher 2/bin/config/Community.ini",
+		"/C/Program Files (x86)/Steam/steamapps/common/the witcher 2/bin/config/Rendering.ini",
+		"/C/Program Files (x86)/Steam/steamapps/common/the witcher 2/bin/config/User.ini",
+		"/C/Users/Peter/Documents/Witcher 2/Config/profiles/PCLow.ini",
+		"/C/Program Files (x86)/Steam/steamapps/common/the witcher 2/ReadMe.txt",
+		"/C/Users/Peter/AppData/Local/Temp/FXSAPIDebugLogFile.txt",
+		"/C/Users/Peter/AppData/Local/Temp/_MEI66002/wx._core_.pyd",
+		"/D/autorun.inf",
+		"/C/Users/Peter/Desktop/readme.txt",
+		"/C/Users/Peter/Documents/RIES1.gnucash",
+		"/C/temp/pingerrr.py",
+		"/C/Users/Peter/Desktop/index.html",
+		"/C/temp/hc/index.html",
+		"/C/temp/hc/app.py",
+		"/C/temp/hc/test_app.py",
+		"/C/temp/hc/index.tpl",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/Windows/System32/drivers/hosts",
+		"/C/temp/hc/css/main.css",
+		"/C/temp/hc/thetext.txt",
+		"/C/temp/hc/app2.py",
+		"/C/temp/hc/404error.tpl",
+		"/C/temp/hc/bottle_app.py",
+		"/C/Users/Peter/Desktop/homechat/css/main.css",
+		"/C/Users/Peter/Desktop/homechat/css/normalize.css",
+		"/C/Users/Peter/Desktop/homechat/index.html",
+		"/C/bat/get-pip.py",
+		"/C/Program Files (x86)/PiBakery/resources/app/pibakery-blocks/reboot/reboot.sh",
+		"/C/Program Files (x86)/PiBakery/resources/app/pibakery-blocks/lampinstall/lampinstall.json",
+		"/C/Program Files (x86)/PiBakery/resources/app/pibakery-blocks/lampinstall/lampInstall.sh",
+		"/C/Users/Peter/Desktop/dev2day-pms.gpg.key",
+		"/C/Users/Peter/Desktop/sep17oct2.qfx",
+		"/C/Users/Peter/Google Drive/Uploads/supplies.txt",
+		"/C/Users/Peter/Google Drive/Uploads/supplies.gdoc",
+		"/C/Users/Peter/Google Drive/Code/javascript/ST_test/st_test.js",
+		"/C/Users/Peter/Google Drive/Code/javascript/ST_test/st_test.sublime-project",
+		"/C/Users/Peter/Google Drive/homepage/peter5homepage/peter-home-homepage.html",
+		"/C/Program Files (x86)/Steam/steamapps/common/PinballArcade/PC11/Resource/Tables/TTaxi_Enums.csv",
+		"/C/bat/check_servers.py",
+		"/C/bat/checksites.log",
+		"/C/bat/data.pkl"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 96.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"reset",
+			"makeenemymove",
+			"makeEnemyMove",
+			"this.enemy",
+			"buildenem",
+			"buildshots",
+			"checkForEnemy",
+			"checkfore",
+			"buildEnemy",
+			"check",
+			"enemytimer",
+			"buildEnemy",
+			"enemy",
+			"fireburst",
+			"countDead",
+			"shot",
+			"this.ship",
+			"shipMoveRate",
+			"shipmoverate",
+			"screenWrapMyShip",
+			"screenwrap",
+			"shiprate",
+			"shipsgroup",
+			"move",
+			"this.ship",
+			"ship",
+			"createCursorKeys",
+			"cursors",
+			"this.cursors.",
+			"body",
+			"moveTargetUp",
+			"gameover",
+			"this.gameover",
+			"move",
+			"dotd",
+			"SpaceRocks",
+			"canhyperspace",
+			"goHyperspace",
+			"rebuildEnemy",
+			"pause",
+			"firerate",
+			"toggle",
+			"arcade",
+			"togg",
+			"togglepause",
+			"this.cursors.left",
+			"overmessage",
+			"-->\n",
+			"renderStatus",
+			"checkForEnemy",
+			"rebuildEnemy",
+			"buildenemy",
+			"enemy",
+			"prevscore",
+			"this.score",
+			"score",
+			"lives",
+			"high",
+			"endGame",
+			"setScreenSize ",
+			"console.log",
+			"consol",
+			"world",
+			"});\n",
+			"192.",
+			"\\n",
+			";",
+			"img",
+			"cl_interp",
+			"rate ",
+			"cl ",
+			"192.168.0.104     thirdpi",
+			"import",
+			"udp",
+			"20160916",
+			"pickle"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"shipMoveRate",
+			"SeaBombs",
+			"pausemessage",
+			" ",
+			"\\n",
+			"/r",
+			"/n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "spacerocks.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 218.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

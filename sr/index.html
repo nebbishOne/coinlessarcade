@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Space Rocks!!!</title>
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<script src="libs/phaser.min.js"></script>
+	<script src="Boot.js"></script>
+	<script src="Preloader.js"></script>
+	<script src="StartMenu.js"></script>
+	<script src="Game.js"></script>
+	<script src="HighScores.js"></script>
+	<style>
+		body {
+			padding: 0;	margin: 0; background-color: #000000;
+		}
+		.container {
+			position:relative;
+			height: 800px;
+		}
+		#sidebar {
+			position: absolute;
+			width:15%; height: 100%;
+		    background:#333; font: small 'Press Start 2P', sans-serif; color: cyan;
+		}
+		#gameContainer {
+			position: absolute;
+			left: 16%;
+		}
+		#footer {
+			position: absolute;
+			top: 870px;
+			width: 100%;
+			background: #FFF; font: small sans-serif; color: #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="sidebar">
+			<p><br><br><br></p>
+			<p>To play:</p>
+			<p>UP = Thrust forward</p>
+			<p>LEFT/RIGHT = turn left or right</p>
+			<p>ALT = Go into hyperspace</p>
+			<p>P = Pause or unpause</p>
+		</div>
+		<div id="gameContainer"></div>
+		<div id="footer">
+			<p><a href="../index2.html">Go back home...</a></p>
+			<p>Report any issues to <a href="https://github.com/nebbishOne/spacerocks/issues" target="_blank">https://github.com/nebbishOne/spacerocks/issues</a>.
+			<br>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License</p>.
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.onload = function() {
+			var game = new Phaser.Game('94', '100', Phaser.AUTO, 'gameContainer');
+			console.log('1) width = ' + game.width + ' and height = ' + game.height);
+			game.state.add('Boot', SpaceRocks.Boot);
+			game.state.add('Preloader', SpaceRocks.Preloader);
+			game.state.add('StartMenu', SpaceRocks.StartMenu);
+			game.state.add('Game', SpaceRocks.Game);
+			game.state.add('HighScores', SpaceRocks.HighScores);
+			game.state.start('Boot');
+		};
+	</script>
+</body>
+</html>

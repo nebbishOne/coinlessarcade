@@ -1,0 +1,91 @@
+body {
+	padding: 0;	
+	margin: 0; 
+	background-color: #000;
+	color: #FFF;
+}
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:focus {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+div {
+	#font: 1.5em Passion One, sans-serif;
+	font: 1.5em Bungee Shade, sans-serif;
+}
+#container {
+	overflow: auto;
+    height: 800px;
+    width: 1000px;
+    position: relative;
+}
+#screen {
+	z-index: 1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 900px;
+	height: 600px;
+}
+#screentext1 {
+	z-index: 100;
+	position: absolute;
+	color: white;
+	font-size: 2em;
+	left: 150px;
+	top: 150px;
+}
+#screentext2 {
+	z-index: 100;
+	position: absolute;
+	color: white;
+	font-size: 1.5em;
+	left: 100px;
+	top: 50px;
+}
+#srscreenshot {
+	z-index: 2;
+	position: absolute;
+	left: 80px;
+	top: 150px;
+	height: 250px;
+	width: 300px;
+}
+#sbscreenshot {
+	z-index: 2;
+	position: absolute;
+	left: 420px;
+	top: 150px;
+	height: 250px;
+	width: 300px;
+}
+#srscreenshottext {
+	z-index: 100;
+	position: absolute;
+	color: white;
+	font-size: 1em;
+	left: 125px;
+	top: 330px;
+}
+#sbscreenshottext {
+	z-index: 100;
+	position: absolute;
+	color: white;
+	font-size: 1em;
+	left: 450px;
+	top: 330px;
+}
