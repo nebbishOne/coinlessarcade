@@ -10,7 +10,6 @@ SpaceRocks.Boot.prototype = {
     },
 
 	create: function() {
-		this.input.maxPointers = 1;
 		this.stage.disableVisibilityChange = false; // pause game on tab change
 
 		this.scale.scaleMode = Phaser.ScaleManager.NO_SCALE;

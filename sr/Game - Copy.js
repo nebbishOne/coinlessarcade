@@ -28,6 +28,7 @@ SpaceRocks.Game = function(game) {
     this.control;
     this.prevInputY;
     this.prevInputX;
+    this.rotateShipTimer;
     this.hyperspace;
     this.hyperdelay;
     this.hypertimer;
@@ -62,7 +63,7 @@ SpaceRocks.Game.prototype = {
         this.enemyTimer = null;
         this.enemyShotTimer = null;
         this.playerRespawnTime = 2500;
-        this.firerate = 250;
+        this.firerate = 200;
         this.shiprate = 50;
         this.maxshiprate = 20;
         this.nextfire = 0;
@@ -74,6 +75,7 @@ SpaceRocks.Game.prototype = {
         this.pauseKey.onDown.add(this.togglePause, this);
         this.prevInputY = 0;
         this.prevInputX = 0;
+        this.rotateShipTimer = null;
         
         this.beep =  this.add.audio('beep');
         this.boom1 = this.add.audio('boom1');
@@ -123,7 +125,7 @@ SpaceRocks.Game.prototype = {
         this.shots = this.add.group();
         this.shots.physicsBodyType = Phaser.Physics.ARCADE;
         this.shots.enableBody = true;
-        this.shots.createMultiple(100, 'shot');
+        this.shots.createMultiple(50, 'shot');
         this.shots.setAll('checkWorldBounds', true);
         this.shots.setAll('outOfBoundsKill', true);
     },
@@ -172,7 +174,24 @@ SpaceRocks.Game.prototype = {
 
     mouseRotateShip: function() {
         if (!this.gameover) {
-            this.ship.rotation = this.game.physics.arcade.angleToPointer(this.ship, this.input.mousePointer) + 1.57079633;
+            var diffY = this.input.y - this.prevInputY;
+            var diffX = this.input.x - this.prevInputX;
+            console.log('this.input.y == ' + this.input.y + ' and the diff is ' + diffY);
+            console.log('this.input.x == ' + this.input.x + ' and the diff is ' + diffX);
+            if (diffY > 0) {                                    // mouse went up
+                this.ship.body.angularVelocity = -200;
+                this.rotateShipTimer = this.time.now + 500;
+            } else if (diffY < 0) {                             // mouse went down
+                this.ship.body.angularVelocity = 200;
+                this.rotateShipTimer = this.time.now + 500;
+            }
+            if (diffX > 0) {                                    // mouse went up
+                this.ship.body.angularVelocity = -200;
+                this.rotateShipTimer = this.time.now + 500;
+            } else if (diffX < 0) {                             // mouse went down
+                this.ship.body.angularVelocity = 200;
+                this.rotateShipTimer = this.time.now + 500;
+            }
         }
     },
     
@@ -238,8 +257,7 @@ SpaceRocks.Game.prototype = {
     
     respawnAsteroid: function(a) {
         if (this.gameover == false) {
-            //a.destroy();
-            a.kill();
+            a.destroy();
             if (a.custSize == 'large') {
                 this.createOneLargeAsteroid();
             } else if (a.custSize == 'medium') {
@@ -254,8 +272,7 @@ SpaceRocks.Game.prototype = {
       if (this.gameover == false) {
           var posX = a.x;
           var posY = a.y;
-          //a.destroy();
-          a.kill();
+          a.destroy();
           this.createTwoMediumAsteroids(posX, posY);
       }  
     },
@@ -264,8 +281,7 @@ SpaceRocks.Game.prototype = {
       if (this.gameover == false) {
           var posX = a.x;
           var posY = a.y;
-          //a.destroy();
-          a.kill()
+          a.destroy();
           this.createTwoSmallAsteroids(posX, posY);
       }  
     },
@@ -341,7 +357,6 @@ SpaceRocks.Game.prototype = {
         this.asteroidCount++;
     },
     
-    /*
     shipExplode: function(s, a) {
         if (this.gameover == false) {
             this.boom3.play();
@@ -369,7 +384,6 @@ SpaceRocks.Game.prototype = {
             }
         }
     },
-    */
     
     screenWrapMyShip: function() {
         if (this.ship.x < 0) {
@@ -721,23 +735,20 @@ SpaceRocks.Game.prototype = {
                 this.enemyShotTimer = null;
             }
             
-            if (this.input.activePointer.leftButton.isDown) {
-                this.fireShot();
-            }
-
             // keyboard inputs - left, right, up
-            if (this.ship && this.ship != undefined)  {
-                if (this.input) {
-                    this.mouseRotateShip();
-                } else if (this.cursors.left.isDown) {
-                    this.ship.body.angularVelocity = -200;
-                } else if (this.cursors.right.isDown) {
-                    this.ship.body.angularVelocity = 200;
-                } else { 
-                    this.ship.body.angularVelocity = 0;
+            if (this.cursors.left.isDown) {
+                if (this.ship && this.ship != undefined) this.ship.body.angularVelocity = -200;
+            } else if (this.cursors.right.isDown) {
+                if (this.ship && this.ship != undefined) this.ship.body.angularVelocity = 200;
+            } else { 
+                if (this.rotateShipTimer < this.time.now) {
+                    if (this.ship && this.ship != undefined) {
+                        this.ship.body.angularVelocity = 0;
+                    }
                 }
             }
-            if (this.cursors.up.isDown) {
+            if (this.cursors.up.isDown)
+            {
                 var shipspeed = this.ship.velocity > 100 ? this.maxshiprate : this.shiprate;
                 this.physics.arcade.accelerationFromRotation(this.ship.rotation-1.57, shipspeed, this.ship.body.acceleration);
                 if (this.brr.isPlaying == false) {
@@ -746,6 +757,22 @@ SpaceRocks.Game.prototype = {
             } else {
                 if (this.ship && this.ship != undefined) this.ship.body.acceleration.set(0);
                 this.brr.stop();
+            }
+
+            // mouse inputs - move, click
+            if (this.input && this.rotateShipTimer === null) {
+                this.mouseRotateShip();
+            }
+
+            if (this.rotateShipTimer != null && this.rotateShipTimer < this.time.now) {
+                this.rotateShipTimer = null;
+                this.ship.body.angularVelocity = 0;
+                this.prevInputY = this.input.y;
+                this.prevInputX = this.input.x;
+            }
+
+            if (this.input.activePointer.leftButton.isDown) {
+                this.fireShot();
             }
 
             // do stuff every Update cycle           
@@ -759,13 +786,11 @@ SpaceRocks.Game.prototype = {
             this.checkEnemyShot(this);
             
              // collisions
-            this.physics.arcade.overlap(this.ship, this.asteroidsgroup, this.shipExplode, null, this);
+            //this.physics.arcade.overlap(this.ship, this.asteroidsgroup, this.shipExplode, null, this);
             this.physics.arcade.overlap(this.enemy, this.asteroidsgroup, this.enemyExplode, null, this);
-            this.physics.arcade.overlap(this.enemyShots, this.ship, this.enemyShipExplode, null, this);
+            //this.physics.arcade.overlap(this.enemyShots, this.ship, this.enemyShipExplode, null, this);
             this.physics.arcade.overlap(this.enemy, this.shots, this.enemyExplode, null, this);
-            if (this != null && this.asteroidsgroup != null && this.shots != null) {
-                this.physics.arcade.overlap(this.asteroidsgroup, this.shots, this.fireBurst, null, this);
-            }
+            //this.physics.arcade.overlap(this.asteroidsgroup, this.shots, this.fireBurst, null, this);
         }
     }
 };
