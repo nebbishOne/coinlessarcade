@@ -170,12 +170,6 @@ SpaceRocks.Game.prototype = {
         }
     },
 
-    mouseRotateShip: function() {
-        if (!this.gameover) {
-            this.ship.rotation = this.game.physics.arcade.angleToPointer(this.ship, this.input.mousePointer) + 1.57079633;
-        }
-    },
-    
     buildEmitter:function() {
         this.burst = this.add.emitter(0, 0, 50);
         this.burst.minParticleScale = 0.3;
@@ -727,9 +721,7 @@ SpaceRocks.Game.prototype = {
 
             // keyboard inputs - left, right, up
             if (this.ship && this.ship != undefined)  {
-                if (this.input) {
-                    this.mouseRotateShip();
-                } else if (this.cursors.left.isDown) {
+                if (this.cursors.left.isDown) {
                     this.ship.body.angularVelocity = -200;
                 } else if (this.cursors.right.isDown) {
                     this.ship.body.angularVelocity = 200;
